@@ -1,0 +1,32 @@
+{
+  "name": "rpg-game",
+  "version": "1.0.0",
+  "description": "Игра в жанре RPG",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Revenanthorror/RPG-game.git"
+  },
+  "keywords": [
+    "game",
+    "rpg",
+    "javascript"
+  ],
+  "author": "Nikolas_K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Revenanthorror/RPG-game/issues"
+  },
+  "homepage": "https://github.com/Revenanthorror/RPG-game#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5"
+  },
+  "dependencies": {
+    "core-js": "^3.47.0"
+  }
+}
