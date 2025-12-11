@@ -12,6 +12,31 @@
     "sourceType": "module"
   },
   "rules": {
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "import/extensions": [
+      "error",
+      "always",
+      {
+        "js": "always"
+      }
+    ],
+    "no-console": "off",
+    "no-mixed-operators": [
+      "error",
+      {
+        "groups": [["+", "-", "*", "/", "%", "**"]],
+        "allowSamePrecedence": true
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "max-len": ["error", { "code": 100 }],
+    "linebreak-style": ["error", "unix"]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js"]
+      }
+    }
   }
 }
