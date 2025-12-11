@@ -4,11 +4,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/js/index.js',
+  
+  mode: 'development',
+  
   output: {
-    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
     clean: true,
   },
+  
   module: {
     rules: [
       {
@@ -19,11 +23,12 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },
+  
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
@@ -33,10 +38,12 @@ module.exports = {
       filename: 'style.css',
     }),
   ],
+  
   devServer: {
-    static: './dist',
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     port: 8080,
     open: true,
   },
-  mode: 'development',
 };
