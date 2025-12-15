@@ -27,16 +27,16 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      
+      template: './public/index.html',
     }),
     new MiniCssExtractPlugin({
       filename: 'style.css',
     }),
   ],
   devServer: {
+    
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: __dirname,
     },
     compress: true,
     port: 8080,
