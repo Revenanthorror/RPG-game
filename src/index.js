@@ -1,4 +1,4 @@
-import { play } from './js/game.js';
+import { playGame } from './js/game.js';
 import Warrior from './js/characters/Warrior.js';
 import Archer from './js/characters/Archer.js';
 import Mage from './js/characters/Mage.js';
